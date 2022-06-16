@@ -1,0 +1,29 @@
+1654769006468	geckodriver	INFO	Listening on 127.0.0.1:56468
+1654769009504	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56469" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\RAHUL~1.GAR\\AppData\\Local\\Temp\\rust_mozprofileG8AFt4"
+1654769010130	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:56469
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\RAHUL~1.GAR\\AppData\\Local\\Temp\\rust_mozprofileG8AFt4\\search.json.mozlz4", (void 0)))
+1654769012303	Marionette	INFO	Listening on port 56493
+DevTools listening on ws://localhost:56469/devtools/browser/4cb6d2bb-2549-491c-a4d2-02b89bb4234e
+Read port: 56493
+1654769012387	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1654769063561	Marionette	INFO	Stopped listening on port 56493
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1654769080263	geckodriver	INFO	Listening on 127.0.0.1:56521
+1654769083333	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56522" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\RAHUL~1.GAR\\AppData\\Local\\Temp\\rust_mozprofilexdaWnW"
+1654769083666	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:56522
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\RAHUL~1.GAR\\AppData\\Local\\Temp\\rust_mozprofilexdaWnW\\search.json.mozlz4", (void 0)))
+1654769085260	Marionette	INFO	Listening on port 56543
+Read port: 56543
+DevTools listening on ws://localhost:56522/devtools/browser/b9572cd0-b006-455e-b86e-158b2065af74
+1654769085305	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1654769097010	Marionette	WARN	TimedPromise timed out after 5000 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+GeckoDriver.prototype.minimizeWindow@chrome://remote/content/marionette/driver.js:2294:11
+1654769100444	Marionette	INFO	Stopped listening on port 56543
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+[Parent 1168, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
