@@ -35,7 +35,7 @@ wait.until(expected_conditions.presence_of_element_located((By.CSS_SELECTOR, ".p
 
 driver.find_element(by=By.CSS_SELECTOR, value=".promocode").send_keys("rahulshettyacademy")
 driver.find_element(by=By.CLASS_NAME, value="promoBtn").click()
-
+print("Hello")
 # doubt on line no 40 abt multiple brackets
 wait.until(expected_conditions.presence_of_element_located((By.CSS_SELECTOR, "span.promoInfo")))
 print(driver.find_element(by=By.CSS_SELECTOR, value="span.promoInfo").text)
