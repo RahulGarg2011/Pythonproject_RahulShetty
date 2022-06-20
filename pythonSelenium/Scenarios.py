@@ -40,7 +40,29 @@ for veg in VegetableName:
 print(list2)
 assert list1 == list2
 
+realamt = driver.find_element(by=By.CSS_SELECTOR, value="span.discountAmt").text
+print(realamt)
+
 driver.find_element(by=By.CSS_SELECTOR, value=".promocode").send_keys("rahulshettyacademy")
 driver.find_element(by=By.CLASS_NAME, value="promoBtn").click()
+
 wait.until(expected_conditions.presence_of_element_located((By.CSS_SELECTOR, "span.promoInfo")))
+discountedamt = driver.find_element(by=By.CSS_SELECTOR, value=".discountAmt").text
+print(discountedamt)
+
+assert discountedamt < realamt      # verify if price decreases after applying coupon
+# assert float(discountedamt) < int(realamt) - in case values are in decimal
+
 print(driver.find_element(by=By.CSS_SELECTOR, value="span.promoInfo").text)
+print("******")
+
+amount = driver.find_elements(by=By.XPATH, value="//tr/td[5]/p")
+total = 0
+for amt in amount:
+    total = total + int(amt.text)    # 75+75=150
+
+print(total)
+
+totalAmount = int(driver.find_element(by=By.CSS_SELECTOR, value=".totAmt").text)
+assert total == totalAmount
+# assert total == int(totalAmount)

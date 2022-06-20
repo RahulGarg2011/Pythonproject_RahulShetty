@@ -10,7 +10,6 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 
 driver = webdriver.Chrome(executable_path="C:\\chromedriver.exe")
-driver.implicitly_wait(5)
 driver.get("https://rahulshettyacademy.com/seleniumPractise/#/")
 driver.find_element(by=By.CSS_SELECTOR, value=".search-keyword").send_keys("or")
 time.sleep(3)
@@ -21,7 +20,13 @@ assert prod == 2
 
 addProduct = driver.find_elements(by=By.XPATH, value="//button[text()='ADD TO CART']")
 
-for add in addProduct:
+# for add in addProduct:
+#     add.click()
+
+# //button[text()='ADD TO CART']/parent::div/parent::div/h4 - to traverse from child to parent and avoiding for loop
+
+for add in addProduct:   # To compare the listing of products on page1 and page2
+    print(add.find_element(by=By.XPATH, value="parent::div/parent::div/h4").text)
     add.click()
 
 # addProduct[0].click()      - another way to add items in the cart
@@ -30,12 +35,12 @@ for add in addProduct:
 driver.find_element(by=By.CSS_SELECTOR, value="img[alt='Cart']").click()
 driver.find_element(by=By.XPATH, value="//button[text()='PROCEED TO CHECKOUT']").click()
 
-wait = WebDriverWait(driver, 5)
+wait = WebDriverWait(driver, 7)
 wait.until(expected_conditions.presence_of_element_located((By.CSS_SELECTOR, ".promocode")))
 
 driver.find_element(by=By.CSS_SELECTOR, value=".promocode").send_keys("rahulshettyacademy")
 driver.find_element(by=By.CLASS_NAME, value="promoBtn").click()
-print("Hello")
-# doubt on line no 40 abt multiple brackets
+
+# doubt on line no 39 abt multiple brackets
 wait.until(expected_conditions.presence_of_element_located((By.CSS_SELECTOR, "span.promoInfo")))
 print(driver.find_element(by=By.CSS_SELECTOR, value="span.promoInfo").text)
