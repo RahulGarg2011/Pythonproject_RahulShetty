@@ -24,3 +24,7 @@ assert radio[2].is_selected()
 
 # radio[4].click()     - list index out of range error
 
+# is_displayed() returns true/false
+assert driver.find_element(by=By.CSS_SELECTOR, value="#displayed-text").is_displayed()
+driver.find_element(by=By.ID, value="hide-textbox").click()
+assert not driver.find_element(by=By.CSS_SELECTOR, value="#displayed-text").is_displayed()
