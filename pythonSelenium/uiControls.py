@@ -12,7 +12,7 @@ for checkbox in checkboxes:
     if checkbox.get_attribute("value") == "option2":
         checkbox.click()
         assert checkbox.is_selected()
-        #print("**********")
+        # print("**********")
 
 # print(checkbox.get_attribute("value"))
 # driver.find_element(by=By.XPATH, value="//input[@value='radio3']").click() - to select radio button 3
